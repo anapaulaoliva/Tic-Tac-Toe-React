@@ -12,14 +12,6 @@ const Square = (props) => {
         </button>
   );
 }
-class Square extends React.Component {
-
-    render() {
-      return (
-        
-      );
-    }
-  }
   
   class Board extends React.Component {
     constructor(props) {
