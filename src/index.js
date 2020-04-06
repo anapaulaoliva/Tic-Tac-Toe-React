@@ -18,8 +18,8 @@ const Square = (props) => {
     renderSquare(i) {
       return (
         <Square 
-        value = { this.props.squares[i] } 
-        onClick = { () => this.props.onClick(i) }
+          value = { this.props.squares[i] } 
+          onClick = { () => this.props.onClick(i) }
         />
       );
     }
@@ -27,7 +27,6 @@ const Square = (props) => {
     render() {
       return (
         <div>
-          <div className="status">{status}</div>
           <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
@@ -55,6 +54,7 @@ const Square = (props) => {
         history: [{
           squares: Array(9).fill(null),
         }],
+        stepNumber: 0,
         xIsNext: true,
       };
     }
@@ -75,6 +75,13 @@ const Square = (props) => {
       });
     }
 
+    jumpTo(step) {
+      this.setState({
+        stepNumber: step,
+        xIsNext: (step % 2) === 0,
+      });
+    }
+    
     render() {
       const history = this.state.history;
       const current = history[history.length - 1];
