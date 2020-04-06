@@ -24,7 +24,7 @@ const Square = (props) => {
 
     handleClick(i) {
       const squares = this.state.squares.slice();
-      squares[i] = 'X';
+      squares[i] = this.state.xIsNext ? 'X' : 'O';
       this.setState( { squares: squares });
     }
 
