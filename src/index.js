@@ -51,9 +51,11 @@ const Square = (props) => {
     constructor(props) {
       super(props);
       this.state = {
-        history: [{
+        history: [
+          {
           squares: Array(9).fill(null),
-        }],
+        }
+        ],
         stepNumber: 0,
         xIsNext: true,
       };
@@ -61,16 +63,18 @@ const Square = (props) => {
 
     handleClick(i) {
       const history = this.state.history.slice(0, this.state.stepNumber + 1);
-      const current = history[this.state.stepNumber];
+      const current = history[history.length - 1];
       const squares = current.squares.slice();
       if (calculateWinner(squares) || squares[i]) {
         return;
       }
       squares[i] = this.state.xIsNext ? 'X' : 'O';
       this.setState({
-        history: history.concat([{
-          squares: squares,
-        }]),
+        history: history.concat([
+          {
+          squares: squares
+          }
+        ]),
         stepNumber: history.length,
         xIsNext: !this.state.xIsNext,
       });
@@ -85,13 +89,13 @@ const Square = (props) => {
 
     render() {
       const history = this.state.history;
-      const current = history[history.length - 1];
+      const current = history[this.state.stepNumber];
       const winner = calculateWinner(current.squares);
 
-      const moves = history.map((step, move) => {
+      const moves = history.map( ( step, move ) => {
         const desc = move ?
-        'Go to move #' + move :
-        'Go to game start';
+          'Go to move #' + move :
+          'Go to game start';
         return (
           <li key = { move }>
             <button 
@@ -104,7 +108,6 @@ const Square = (props) => {
       });
 
       let status;
-
       if (winner) {
         status = 'Winner: ' + winner;
       } else {
