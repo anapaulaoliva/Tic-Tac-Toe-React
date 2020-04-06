@@ -46,10 +46,10 @@ const Square = (props) => {
     render() {
       const winner = calculateWinner(this.state.squares);
       let status;
-      if(winner) {
+      if (winner) {
         status = 'Winner ' + winner;
       } else {
-      const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
       }
 
       return (
@@ -76,6 +76,15 @@ const Square = (props) => {
   }
   
   class Game extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        history: [{
+          squares: Array(9).fill(null),
+        }],
+        xIsNext: true,
+      };
+    }
     render() {
       return (
         <div className="game">
