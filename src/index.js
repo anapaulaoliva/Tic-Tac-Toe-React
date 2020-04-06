@@ -6,7 +6,7 @@ const Square = (props) => {
   return (
       <button 
         className="square" 
-        onClick={ () => props.onClick() }
+        onClick={ props.onClick }
         >
           { props.value }
         </button>
@@ -18,6 +18,7 @@ const Square = (props) => {
       super(props);
       this.state = {
         squares: Array(9).fill(null),
+        xIsNext: true,
       };
     }
 
@@ -29,10 +30,10 @@ const Square = (props) => {
 
     renderSquare(i) {
       return (
-      <Square 
-      value = { this.state.squares } 
-      onClick = { () => this.handleClick(i) }
-      />
+        <Square 
+        value = { this.state.squares[i] } 
+        onClick = { () => this.handleClick(i) }
+        />
       );
     }
   
