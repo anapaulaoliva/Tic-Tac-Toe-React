@@ -25,7 +25,10 @@ const Square = (props) => {
     handleClick(i) {
       const squares = this.state.squares.slice();
       squares[i] = this.state.xIsNext ? 'X' : 'O';
-      this.setState( { squares: squares });
+      this.setState( {
+        squares: squares,
+        xIsNext: !this.state.xIsNext,
+      });
     }
 
     renderSquare(i) {
@@ -38,7 +41,7 @@ const Square = (props) => {
     }
   
     render() {
-      const status = 'Next player: X';
+      const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
   
       return (
         <div>
