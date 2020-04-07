@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import squareStyle from './square.module.css';
+import boardStyle from  './board.module.css';
+import gameStyle from './game.module.css';
 
 const Square = (props) => {
   return (
       <button 
-        className="square" 
+        className={ squareStyle.square } 
         onClick={ props.onClick }
         >
           { props.value }
@@ -27,17 +30,17 @@ const Square = (props) => {
     render() {
       return (
         <div>
-          <div className="board-row">
+          <div className={ boardStyle.boardRow }>
             {this.renderSquare(0)}
             {this.renderSquare(1)}
             {this.renderSquare(2)}
           </div>
-          <div className="board-row">
+          <div className={ boardStyle.boardRow }>
             {this.renderSquare(3)}
             {this.renderSquare(4)}
             {this.renderSquare(5)}
           </div>
-          <div className="board-row">
+          <div className={ boardStyle.boardRow }>
             {this.renderSquare(6)}
             {this.renderSquare(7)}
             {this.renderSquare(8)}
@@ -115,14 +118,14 @@ const Square = (props) => {
       }
 
       return (
-        <div className="game">
-          <div className="game-board">
+        <div className={ gameStyle.game }>
+          <div className={ gameStyle.gameBoard }>
             <Board
               squares={current.squares}
               onClick={(i) => this.handleClick(i)}
             />
           </div>
-          <div className="game-info">
+          <div className={ gameStyle.gameInfo }>
             <div>{ status }</div>
             <ol>{ moves }</ol>
           </div>
@@ -157,4 +160,3 @@ const Square = (props) => {
     <Game />,
     document.getElementById('root')
   );
-  
