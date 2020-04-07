@@ -1,0 +1,7 @@
+.boardRow:after {
+    clear: both;
+    content: "";
+    display: table;
+    background-color: rgb(229, 240, 169);
+    padding: .2em;
+    }
