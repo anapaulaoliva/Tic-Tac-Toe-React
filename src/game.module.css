@@ -1,0 +1,23 @@
+.game {
+    display: flex;
+    flex-direction: row;
+    background-color: palevioletred;
+    padding: .5em;
+    }
+.gameInfo {
+    margin-left: 20px;
+    color: orange;
+    }
+ol, ul {
+    color: transparent;
+    background-color: sandybrown;
+    padding: .3em;
+    }
+li {
+    background-color: seagreen;
+    padding: .5em;
+    }
+button {
+    background-color: tomato;
+    padding: .2em;
+    }
