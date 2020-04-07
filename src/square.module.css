@@ -1,0 +1,27 @@
+.status {
+    margin-bottom: 10px;
+    }
+
+.square {
+    background: #fff;
+    border: 2px solid rgb(122, 40, 189);
+    float: left;
+    font-size: 3em;
+    font-weight: bold;
+    color: rgb(33, 194, 145);
+    line-height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    }
+
+.square:focus {
+    outline: none;
+    }
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+    }
