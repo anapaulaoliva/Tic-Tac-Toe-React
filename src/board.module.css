@@ -1,6 +1,0 @@
-.boardRow:after {
-    clear: both;
-    content: "";
-    display: table;
-    padding: .1em;
-    }
