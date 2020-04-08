@@ -1,6 +1,6 @@
 #### Hi! Just Learning React's Basics and making it funny : )
 
-###What it looks like
+### What it looks like ...
 
 ![Prototype](asset.JPG)
 
