@@ -1,5 +1,9 @@
 #### Hi! Just Learning React's Basics and making it funny : )
 
+### What it looks like ...
+# Gh-Pages link at description.
+
+![Prototype](asset.JPG)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
