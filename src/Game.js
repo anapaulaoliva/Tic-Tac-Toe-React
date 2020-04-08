@@ -49,8 +49,8 @@ export default class Game extends React.Component {
 
       const moves = history.map( ( step, move ) => {
         const desc = move ?
-          'Go to move #' + move :
-          'Go to game start';
+          'Move ' + move :
+          'Go to Start';
         return (
           <li key = { move }>
             <button 
@@ -66,11 +66,12 @@ export default class Game extends React.Component {
       if (winner) {
         status = 'Winner: ' + winner;
       } else {
-        status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+        status = 'Player: ' + (this.state.xIsNext ? 'X' : 'O');
       }
 
       return (
         <div className={ gameStyle.game }>
+          <div className={ gameStyle.title }><span>Tic<br />Tac<br />Toe</span></div>
           <div className={ gameStyle.gameBoard }>
             <Board
               squares={current.squares}
