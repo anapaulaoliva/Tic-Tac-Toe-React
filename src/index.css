@@ -1,9 +1,16 @@
 body {
+    display: flex;
+    justify-content: center;
     font: 1em "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-    background-color: rgb(245, 245, 245);
+    margin: 3em;
+    padding-top: 1em;
+    background-color: rgba(224, 66, 153, 0.096);
   }
   #root {
-    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #d2d2d2;
     padding: 1em;
   }

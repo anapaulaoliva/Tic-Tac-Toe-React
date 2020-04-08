@@ -3,12 +3,12 @@
     }
 
 .square {
-    background: #fff;
-    border: 2px solid rgb(122, 40, 189);
+    background: rgba(56, 204, 160, 0.712);
+    border: 2px solid rgb(135, 240, 222);
     float: left;
     font-size: 3em;
     font-weight: bold;
-    color: rgb(33, 194, 145);
+    color: #fff;
     line-height: 34px;
     margin-right: -1px;
     margin-top: -1px;
